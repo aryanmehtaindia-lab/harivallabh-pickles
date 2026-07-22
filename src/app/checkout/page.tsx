@@ -168,7 +168,7 @@ export default function CheckoutPage() {
                 <div>
                   <label className="text-xs text-foreground/50 font-medium block mb-1.5">Mobile Number *</label>
                   <input type="tel" value={form.mobile} onChange={(e) => setForm({ ...form, mobile: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-golden/20 bg-cream/50 focus:outline-none focus:border-golden focus:bg-warm-white transition-all text-sm" placeholder="9876543210" />
+                    className="w-full px-4 py-3 rounded-xl border border-golden/20 bg-cream/50 focus:outline-none focus:border-golden focus:bg-warm-white transition-all text-sm" placeholder="9825731877" />
                 </div>
                 <div className="md:col-span-2">
                   <label className="text-xs text-foreground/50 font-medium block mb-1.5">Email *</label>

@@ -65,7 +65,7 @@ export default function ContactPage() {
                 value={form.mobile}
                 onChange={(e) => setForm({ ...form, mobile: e.target.value })}
                 className="w-full px-4 py-2 rounded-lg border border-golden/30 bg-cream focus:outline-none focus:border-golden"
-                placeholder="+91 98765 43210"
+                placeholder="+91 98257 31877"
               />
             </div>
             <div>
@@ -95,7 +95,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="font-medium text-maroon">Phone / WhatsApp</p>
-                  <p className="text-sm text-foreground/60">+91 98765 43210</p>
+                  <p className="text-sm text-foreground/60">+91 98257 31877</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -132,7 +132,7 @@ export default function ContactPage() {
             <h4 className="font-bold text-maroon mb-2">Quick Order via WhatsApp</h4>
             <p className="text-sm text-foreground/60 mb-3">Send us your order list directly on WhatsApp for faster processing!</p>
             <a
-              href="https://wa.me/919876543210?text=Hi%20Harivallabh!%20I%20want%20to%20place%20an%20order."
+              href="https://wa.me/919825731877?text=Hi%20Harivallabh!%20I%20want%20to%20place%20an%20order."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-green-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-green-700 transition-colors"

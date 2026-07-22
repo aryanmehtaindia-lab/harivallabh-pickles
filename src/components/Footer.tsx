@@ -59,11 +59,11 @@ export default function Footer() {
           <div>
             <h5 className="font-bold text-golden text-sm uppercase tracking-wider mb-4">Reach Us</h5>
             <div className="space-y-3 text-sm text-white/50">
-              <p className="flex items-center gap-2"><span className="text-golden">📞</span> +91 98765 43210</p>
+              <p className="flex items-center gap-2"><span className="text-golden">📞</span> +91 98257 31877</p>
               <p className="flex items-center gap-2"><span className="text-golden">📧</span> info@harivallabh.in</p>
               <p className="flex items-center gap-2"><span className="text-golden">📍</span> Ahmedabad, Gujarat</p>
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/919825731877"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-green-700/20 text-green-400 px-4 py-2 rounded-full text-xs font-medium hover:bg-green-700/30 transition-colors mt-2"

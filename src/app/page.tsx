@@ -167,7 +167,7 @@ export default function Home() {
             <Link href="/products" className="bg-golden text-dark-maroon px-8 py-3 rounded-full font-bold hover:bg-light-golden transition-colors shadow-lg">
               Order Now
             </Link>
-            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="border-2 border-golden/50 text-golden px-8 py-3 rounded-full font-bold hover:bg-golden/10 transition-colors">
+            <a href="https://wa.me/919825731877" target="_blank" rel="noopener noreferrer" className="border-2 border-golden/50 text-golden px-8 py-3 rounded-full font-bold hover:bg-golden/10 transition-colors">
               💬 WhatsApp Order
             </a>
           </div>
