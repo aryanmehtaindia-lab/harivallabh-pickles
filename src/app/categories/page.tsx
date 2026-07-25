@@ -1,24 +1,32 @@
+"use client";
+
 import Link from "next/link";
 import { categories, products } from "@/data/products";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export default function CategoriesPage() {
-  return (
-    <div className="py-8 px-4 max-w-6xl mx-auto">
-      <h2 className="text-3xl font-bold text-maroon mb-1">Categories</h2>
-      <p className="text-golden font-medium mb-8">અમારી કેટેગરી</p>
+  useScrollReveal();
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  return (
+    <div className="py-10 px-4 max-w-6xl mx-auto">
+      <div className="text-center mb-12 reveal">
+        <p className="text-[10px] uppercase tracking-[0.4em] text-golden font-semibold mb-3">Browse By Type</p>
+        <h2 className="text-3xl md:text-4xl font-bold text-maroon">Pickle Categories</h2>
+        <p className="text-golden/80 font-medium mt-1">અમારી કેટેગરી</p>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children reveal">
         {categories.map((cat) => {
           const count = products.filter((p) => p.category === cat.id).length;
           return (
             <Link href={`/categories/${cat.id}`} key={cat.id}>
-              <div className="bg-warm-white rounded-2xl p-8 text-center shadow-md hover:shadow-xl transition-all hover:-translate-y-1 transform border border-golden/20">
-                <div className="w-24 h-24 mx-auto rounded-full bg-cream border-2 border-golden/40 flex items-center justify-center mb-4">
+              <div className="bg-warm-white rounded-2xl p-8 text-center card-hover border-glow magnetic h-full">
+                <div className="w-24 h-24 mx-auto rounded-2xl bg-cream border-2 border-golden/20 flex items-center justify-center mb-5">
                   <span className="text-5xl">{cat.emoji}</span>
                 </div>
                 <h4 className="text-xl font-bold text-maroon">{cat.nameEn}</h4>
                 <p className="text-golden font-medium">{cat.nameGu}</p>
-                <p className="text-sm text-foreground/60 mt-2">{count} products</p>
+                <p className="text-sm text-foreground/40 mt-2">{count} varieties</p>
               </div>
             </Link>
           );
