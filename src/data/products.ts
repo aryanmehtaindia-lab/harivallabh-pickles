@@ -35,9 +35,9 @@ export const products: Product[] = [
   {
     id: "aakhi-keri",
     nameGu: "આખી કેરી",
-    nameEn: "Aakhi Keri (Whole Mango Pickle)",
+    nameEn: "Aakhi Keri",
     descriptionGu: "દેશી મસાલા સાથે પરંપરાગત આખી કેરીનું અથાણું.",
-    descriptionEn: "Traditional whole mango pickle with authentic desi masala. A Gujarat household staple.",
+    descriptionEn: "Traditional whole mango pickle with desi masala. A Gujarat household staple.",
     category: "traditional",
     categoryGu: "પરંપરાગત અથાણાં",
     variants: [
@@ -56,11 +56,11 @@ export const products: Product[] = [
     image: "/logo.png",
   },
   {
-    id: "gunda-pickle",
-    nameGu: "ગુંદા અથાણું",
-    nameEn: "Gunda Pickle",
+    id: "gunda",
+    nameGu: "ગુંદા",
+    nameEn: "Gunda",
     descriptionGu: "તીખા અને ખટ્ટા ગુંદાનું અથાણું - પરંપરાગત સ્વાદ.",
-    descriptionEn: "Tangy & spicy gunda pickle with perfect traditional taste. A Gujarati favourite.",
+    descriptionEn: "Tangy & spicy gunda pickle with perfect traditional taste.",
     category: "traditional",
     categoryGu: "પરંપરાગત અથાણાં",
     variants: [
@@ -80,7 +80,7 @@ export const products: Product[] = [
   {
     id: "gol-keri",
     nameGu: "ગોળ કેરી",
-    nameEn: "Gol Keri (Sweet & Sour Mango)",
+    nameEn: "Gol Keri",
     descriptionGu: "ગોળ કેરી - ગુજરાતનું ખાસ મીઠું-ખાટું અથાણું.",
     descriptionEn: "Sweet & sour gol keri pickle — a Gujarati favorite with jaggery and raw mango.",
     category: "sweet",
@@ -103,7 +103,7 @@ export const products: Product[] = [
   {
     id: "chana-methi",
     nameGu: "ચણા મેથી",
-    nameEn: "Chana Methi Pickle",
+    nameEn: "Chana Methi",
     descriptionGu: "ક્રન્ચી ચણા મેથી - ભરપૂર મસાલેદાર સ્વાદ.",
     descriptionEn: "Crunchy chana methi pickle with rich masala flavor. Perfect with parathas.",
     category: "special",
@@ -125,7 +125,7 @@ export const products: Product[] = [
   {
     id: "chundo",
     nameGu: "છુંદો",
-    nameEn: "Chundo (Sweet Mango Preserve)",
+    nameEn: "Chundo",
     descriptionGu: "પ્રીમિયમ કાચી કેરીથી બનેલો મીઠો છુંદો.",
     descriptionEn: "Sweet mango chundo made with premium raw mangoes. A beloved Gujarati delicacy.",
     category: "sweet",
@@ -148,7 +148,7 @@ export const products: Product[] = [
   {
     id: "limbu-sweet",
     nameGu: "લીંબુ (મીઠું)",
-    nameEn: "Limbu Sweet (Sweet Lemon Pickle)",
+    nameEn: "Limbu (Sweet)",
     descriptionGu: "મીઠું લીંબુનું અથાણું - સ્વાદનું સંતુલન.",
     descriptionEn: "Sweet lemon pickle with perfect balance of taste. Mild and flavourful.",
     category: "sweet",
@@ -168,9 +168,9 @@ export const products: Product[] = [
     image: "/logo.png",
   },
   {
-    id: "kerda-pickle",
-    nameGu: "કેરડા અથાણું",
-    nameEn: "Kerda Pickle",
+    id: "kerda",
+    nameGu: "કેરડા",
+    nameEn: "Kerda",
     descriptionGu: "તીખા અને મસાલેદાર કેરડાનું અથાણું - સરસવ સાથે.",
     descriptionEn: "Tangy & spicy kerda pickle with mustard & aromatic spices.",
     category: "special",
@@ -190,9 +190,9 @@ export const products: Product[] = [
     image: "/logo.png",
   },
   {
-    id: "gajar-pickle",
-    nameGu: "ગાજર અથાણું",
-    nameEn: "Gajar Pickle (Carrot Pickle)",
+    id: "gajar",
+    nameGu: "ગાજર",
+    nameEn: "Gajar",
     descriptionGu: "મસાલેદાર ગાજરનું અથાણું - પરંપરાગત મસાલા.",
     descriptionEn: "Spicy carrot pickle with traditional spices. Crunchy and flavourful.",
     category: "traditional",
@@ -212,11 +212,11 @@ export const products: Product[] = [
     image: "/logo.png",
   },
   {
-    id: "punjabi-mixed",
-    nameGu: "પંજાબી મિક્સ",
-    nameEn: "Punjabi Mixed Pickle",
+    id: "punjabi",
+    nameGu: "પંજાબી",
+    nameEn: "Punjabi",
     descriptionGu: "ક્લાસિક મિક્સ વેજ પંજાબી અથાણું - તેજ સ્વાદ.",
-    descriptionEn: "A classic mixed vegetable pickle with bold & rich Punjabi flavors.",
+    descriptionEn: "A classic mixed vegetable pickle with bold & rich flavors.",
     category: "spicy",
     categoryGu: "તીખા અથાણાં",
     variants: [
@@ -237,9 +237,9 @@ export const products: Product[] = [
   {
     id: "lal-marcha",
     nameGu: "લાલ મરચાં",
-    nameEn: "Lal Marcha (Red Chilli Pickle)",
+    nameEn: "Lal Marcha",
     descriptionGu: "ભરેલા લાલ મરચાંનું અથાણું - ખૂબ તીખું!",
-    descriptionEn: "Fiery red chili pickle stuffed with spices. For true spice lovers!",
+    descriptionEn: "Fiery red chili pickle for true spice lovers!",
     category: "spicy",
     categoryGu: "તીખા અથાણાં",
     variants: [
@@ -259,7 +259,7 @@ export const products: Product[] = [
   {
     id: "raita-marcha",
     nameGu: "રાઈતા મરચાં",
-    nameEn: "Raita Marcha Pickle",
+    nameEn: "Raita Marcha",
     descriptionGu: "રાઈના મસાલા સાથે બનેલું મરચાંનું અથાણું.",
     descriptionEn: "Traditional raita marcha pickle made with rich mustard spices & bold taste.",
     category: "spicy",
@@ -279,9 +279,9 @@ export const products: Product[] = [
     image: "/logo.png",
   },
   {
-    id: "bijora-pickle",
-    nameGu: "બીજોરા અથાણું",
-    nameEn: "Bijora Pickle",
+    id: "bijora",
+    nameGu: "બીજોરા",
+    nameEn: "Bijora",
     descriptionGu: "અધિકૃત મસાલા અને યુનિક ફ્લેવર સાથે બીજોરાનું અથાણું.",
     descriptionEn: "Traditional bijora pickle with authentic spices & unique citrus flavor.",
     category: "special",
