@@ -14,8 +14,20 @@ export default function Home() {
     <div>
       {/* ===== PREMIUM HERO SECTION ===== */}
       <section className="relative min-h-[90vh] flex items-center justify-center px-4 overflow-hidden">
-        {/* Cinematic dark overlay background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-dark-maroon/95 via-maroon/90 to-dark-maroon/95"></div>
+        {/* Cinematic background video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          poster="/logo.png"
+        >
+          <source src="https://videos.pexels.com/video-files/5774801/5774801-hd_1920_1080_30fps.mp4" type="video/mp4" />
+        </video>
+
+        {/* Dark overlay on video */}
+        <div className="absolute inset-0 bg-gradient-to-b from-dark-maroon/90 via-maroon/85 to-dark-maroon/92"></div>
 
         {/* Floating spice particles */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
