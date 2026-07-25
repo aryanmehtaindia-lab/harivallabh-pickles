@@ -13,7 +13,7 @@ export default function ProductsPage() {
   let filtered = [...products].filter((p) => {
     const matchesSearch =
       p.nameEn.toLowerCase().includes(search.toLowerCase()) ||
-      p.nameGu.includes(search);
+      p.descriptionEn.toLowerCase().includes(search.toLowerCase());
     const matchesCategory = categoryFilter === "all" || p.category === categoryFilter;
     const matchesTaste = tasteFilter === "all" || p.taste === tasteFilter;
     return matchesSearch && matchesCategory && matchesTaste;
@@ -30,7 +30,7 @@ export default function ProductsPage() {
       <div className="text-center mb-10">
         <p className="text-xs uppercase tracking-[0.3em] text-golden font-semibold mb-2">Our Collection</p>
         <h2 className="text-3xl md:text-4xl font-bold text-maroon">All Products</h2>
-        <p className="text-golden/80 font-medium mt-1">બધા ઉત્પાદનો</p>
+        <p className="text-golden/80 font-medium mt-1">12 Authentic Handcrafted Pickles</p>
       </div>
 
       {/* Filters */}

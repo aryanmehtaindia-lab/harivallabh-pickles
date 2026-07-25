@@ -56,7 +56,7 @@ export default function ProductCard({ product }: { product: Product }) {
         {/* Product Info */}
         <div className="p-5 flex-1 flex flex-col">
           <h4 className="font-bold text-maroon text-base leading-tight">{product.nameEn}</h4>
-          <p className="text-[11px] text-foreground/40 mt-0.5 mb-2">{product.nameGu}</p>
+          <p className="text-[11px] text-foreground/40 mt-0.5 mb-2">{product.descriptionEn}</p>
 
           {/* Rating */}
           <div className="flex items-center gap-1.5 mb-3">

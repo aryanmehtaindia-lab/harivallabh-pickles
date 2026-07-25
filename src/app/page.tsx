@@ -45,7 +45,7 @@ export default function Home() {
           </h2>
 
           <p className="text-lg md:text-xl text-golden/90 font-medium mb-2 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            ભક્તિ, શુદ્ધતા અને પરંપરાગત સ્વાદનો સંગમ
+            Devotion, Purity & Traditional Taste
           </p>
           <p className="text-sm md:text-base text-foreground/40 mb-10 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
             ♦ 12 Authentic Pickles ♦ Made with Love, Tradition & Quality Ingredients
@@ -87,17 +87,17 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 stagger-children reveal">
             {[
-              { emoji: "🙏", gu: "શુદ્ધ શાકાહારી", en: "100% Pure Vegetarian" },
-              { emoji: "🏠", gu: "ઘરેલુ બનાવટ", en: "Handcrafted at Home" },
-              { emoji: "🌿", gu: "કોઈ પ્રિઝર્વેટિવ નહિ", en: "Zero Preservatives" },
-              { emoji: "🚚", gu: "ઘરે ડિલિવરી", en: "Pan-India Delivery" },
+              { emoji: "🙏", title: "100% Pure Vegetarian", sub: "No onion, no garlic" },
+              { emoji: "🏠", title: "Handcrafted at Home", sub: "Made in small batches" },
+              { emoji: "🌿", title: "Zero Preservatives", sub: "All natural ingredients" },
+              { emoji: "🚚", title: "Pan-India Delivery", sub: "Free above ₹500" },
             ].map((badge) => (
-              <div key={badge.en} className="glass rounded-2xl p-6 text-center magnetic">
+              <div key={badge.title} className="glass rounded-2xl p-6 text-center magnetic">
                 <div className="w-14 h-14 mx-auto rounded-2xl bg-cream border border-golden/20 flex items-center justify-center mb-3 group-hover:animate-pulse-gold">
                   <span className="text-2xl">{badge.emoji}</span>
                 </div>
-                <p className="text-sm font-semibold text-maroon">{badge.gu}</p>
-                <p className="text-[11px] text-foreground/40 mt-0.5">{badge.en}</p>
+                <p className="text-sm font-semibold text-maroon">{badge.title}</p>
+                <p className="text-[11px] text-foreground/40 mt-0.5">{badge.sub}</p>
               </div>
             ))}
           </div>
@@ -111,7 +111,7 @@ export default function Home() {
           <div className="text-center mb-14 reveal">
             <p className="text-[10px] uppercase tracking-[0.4em] text-golden font-semibold mb-3">Explore Our Range</p>
             <h3 className="text-3xl md:text-4xl font-bold text-maroon">Pickle Categories</h3>
-            <p className="text-golden/80 font-medium mt-1">અમારી કેટેગરી</p>
+            <p className="text-golden/80 font-medium mt-1">Explore our authentic range</p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 stagger-children reveal">
             {categories.map((cat) => (
@@ -121,7 +121,7 @@ export default function Home() {
                     <span className="text-4xl group-hover:scale-125 transition-transform duration-500">{cat.emoji}</span>
                   </div>
                   <h4 className="text-base font-bold text-maroon">{cat.nameEn}</h4>
-                  <p className="text-sm text-golden/80 font-medium">{cat.nameGu}</p>
+                  <p className="text-sm text-golden/80 font-medium">{cat.nameEn}</p>
                   <div className="mt-3 h-0 group-hover:h-6 overflow-hidden transition-all duration-300">
                     <span className="text-xs text-maroon/60 font-medium">Explore →</span>
                   </div>
@@ -139,7 +139,7 @@ export default function Home() {
           <div className="text-center mb-14 reveal">
             <p className="text-[10px] uppercase tracking-[0.4em] text-golden font-semibold mb-3">Most Loved</p>
             <h3 className="text-3xl md:text-4xl font-bold text-maroon">Bestsellers</h3>
-            <p className="text-golden/80 font-medium mt-1">અમારા બેસ્ટસેલર</p>
+            <p className="text-golden/80 font-medium mt-1">Our most loved pickles</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 stagger-children reveal">
             {featured.map((product) => (
@@ -162,20 +162,20 @@ export default function Home() {
           <div className="text-center mb-14 reveal">
             <p className="text-[10px] uppercase tracking-[0.4em] text-golden font-semibold mb-3">Our Promise</p>
             <h3 className="text-3xl md:text-4xl font-bold text-maroon">Why Harivallabh?</h3>
-            <p className="text-golden/80 font-medium mt-1">શા માટે હરિવલ્લભ?</p>
+            <p className="text-golden/80 font-medium mt-1">Our promise to you</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-children reveal">
             {[
-              { emoji: "🕉️", title: "Devotion", gu: "ભક્તિ", desc: "Every jar is prepared with prayer and spiritual intention." },
-              { emoji: "✨", title: "Purity", gu: "શુદ્ધતા", desc: "Only natural ingredients. No chemicals, no shortcuts." },
-              { emoji: "🏺", title: "Tradition", gu: "પરંપરા", desc: "Recipes perfected over generations of Gujarati heritage." },
+              { emoji: "🕉️", title: "Devotion", sub: "Made with prayer", desc: "Every jar is prepared with prayer and spiritual intention." },
+              { emoji: "✨", title: "Purity", sub: "All natural", desc: "Only natural ingredients. No chemicals, no shortcuts." },
+              { emoji: "🏺", title: "Tradition", sub: "Family recipes", desc: "Recipes perfected over generations of Gujarati heritage." },
             ].map((value) => (
               <div key={value.title} className="glass rounded-2xl p-8 text-center card-hover magnetic">
                 <div className="w-16 h-16 mx-auto rounded-2xl gradient-maroon flex items-center justify-center mb-5 shadow-lg shadow-maroon/20">
                   <span className="text-3xl">{value.emoji}</span>
                 </div>
                 <h5 className="font-bold text-maroon text-lg">{value.title}</h5>
-                <p className="text-golden text-sm font-medium mb-2">{value.gu}</p>
+                <p className="text-golden text-sm font-medium mb-2">{value.sub}</p>
                 <p className="text-sm text-foreground/50 leading-relaxed">{value.desc}</p>
               </div>
             ))}

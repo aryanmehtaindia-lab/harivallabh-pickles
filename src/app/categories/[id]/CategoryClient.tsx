@@ -36,7 +36,7 @@ export default function CategoryClient() {
         </div>
         <div>
           <h2 className="text-3xl font-bold text-maroon">{category.nameEn}</h2>
-          <p className="text-golden font-medium">{category.nameGu} • {categoryProducts.length} products</p>
+          <p className="text-golden font-medium">{categoryProducts.length} products available</p>
         </div>
       </div>
 

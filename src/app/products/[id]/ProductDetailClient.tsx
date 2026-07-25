@@ -68,9 +68,9 @@ export default function ProductDetailClient() {
         </div>
 
         <div className="animate-fade-in-up">
-          <span className="text-xs uppercase tracking-wider text-golden font-semibold">{product.categoryGu}</span>
-          <h1 className="text-3xl md:text-4xl font-bold text-maroon leading-tight mt-1">{product.nameGu}</h1>
-          <h2 className="text-lg text-foreground/60 mt-1">{product.nameEn}</h2>
+          <span className="text-xs uppercase tracking-wider text-golden font-semibold">{product.category}</span>
+          <h1 className="text-3xl md:text-4xl font-bold text-maroon leading-tight mt-1">{product.nameEn}</h1>
+          <h2 className="text-lg text-foreground/60 mt-1">{product.descriptionEn}</h2>
 
           <div className="flex items-center gap-3 mt-4">
             <div className="flex">
@@ -115,8 +115,7 @@ export default function ProductDetailClient() {
           <div className="mt-10 space-y-4">
             <div className="glass rounded-xl p-5">
               <h4 className="font-bold text-maroon text-sm mb-2">📝 Description</h4>
-              <p className="text-sm text-foreground/70">{product.descriptionGu}</p>
-              <p className="text-sm text-foreground/50 mt-2">{product.descriptionEn}</p>
+              <p className="text-sm text-foreground/70">{product.descriptionEn}</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               <div className="glass rounded-xl p-4">

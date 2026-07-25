@@ -6,7 +6,7 @@ export default function AboutPage() {
       <div className="text-center mb-12">
         <Image src="/logo.png" alt="Harivallabh" width={150} height={150} className="mx-auto mb-6" />
         <h2 className="text-3xl font-bold text-maroon mb-1">About Harivallabh</h2>
-        <p className="text-golden font-medium">અમારા વિશે</p>
+        <p className="text-golden font-medium">Our Story</p>
       </div>
 
       <div className="space-y-8">
@@ -16,24 +16,24 @@ export default function AboutPage() {
             Harivallabh is more than just a brand — it&apos;s a tradition carried forward with devotion and love. Founded on the principles of purity, authenticity, and the rich culinary heritage of Gujarat, we bring you homemade products that taste just like the ones made in a Gujarati kitchen.
           </p>
           <p className="text-foreground/60 leading-relaxed">
-            હરિવલ્લભ એ માત્ર એક બ્રાન્ડ નથી — તે ભક્તિ અને પ્રેમ સાથે આગળ ધપાવેલી પરંપરા છે. શુદ્ધતા, અધિકૃતતા અને ગુજરાતના સમૃદ્ધ રાંધણ વારસાના સિદ્ધાંતો પર સ્થાપિત, અમે તમને ઘરેલુ ઉત્પાદનો લાવીએ છીએ.
+            Harivallabh is more than a brand — it is a tradition carried forward with devotion and love. Built on the principles of purity, authenticity, and the rich culinary heritage of Gujarat, we bring you homemade products that taste just like the ones made in a traditional Gujarati kitchen.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-cream rounded-xl p-6 border border-golden/20 text-center">
             <span className="text-4xl">🕉️</span>
-            <h4 className="font-bold text-maroon mt-3">ભક્તિ (Devotion)</h4>
+            <h4 className="font-bold text-maroon mt-3">Devotion</h4>
             <p className="text-sm text-foreground/60 mt-2">Every recipe is made with devotion and mindful preparation, following Swaminarayan values of purity.</p>
           </div>
           <div className="bg-cream rounded-xl p-6 border border-golden/20 text-center">
             <span className="text-4xl">✨</span>
-            <h4 className="font-bold text-maroon mt-3">શુદ્ધતા (Purity)</h4>
+            <h4 className="font-bold text-maroon mt-3">Purity</h4>
             <p className="text-sm text-foreground/60 mt-2">We use only pure, natural ingredients. No preservatives, no artificial colors, no chemicals — just pure goodness.</p>
           </div>
           <div className="bg-cream rounded-xl p-6 border border-golden/20 text-center">
             <span className="text-4xl">🏺</span>
-            <h4 className="font-bold text-maroon mt-3">પરંપરા (Tradition)</h4>
+            <h4 className="font-bold text-maroon mt-3">Tradition</h4>
             <p className="text-sm text-foreground/60 mt-2">Recipes passed down through generations, maintaining the authentic taste that Gujarati families love.</p>
           </div>
         </div>

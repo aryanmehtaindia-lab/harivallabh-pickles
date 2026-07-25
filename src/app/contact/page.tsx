@@ -31,7 +31,7 @@ export default function ContactPage() {
   return (
     <div className="py-8 px-4 max-w-6xl mx-auto">
       <h2 className="text-3xl font-bold text-maroon mb-1">Contact Us</h2>
-      <p className="text-golden font-medium mb-8">સંપર્ક કરો</p>
+      <p className="text-golden font-medium mb-8">Get in Touch</p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Contact Form */}
