@@ -11,168 +11,143 @@ export default function Home() {
   const featured = products.filter((p) => p.tags.includes("Bestseller")).slice(0, 6);
 
   return (
-    <div>
-      {/* ===== PREMIUM HERO SECTION ===== */}
-      <section className="relative min-h-[90vh] flex items-center justify-center px-4 overflow-hidden">
-        {/* Cinematic background video */}
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-          poster="/logo.png"
-        >
-          <source src="https://videos.pexels.com/video-files/5774801/5774801-hd_1920_1080_30fps.mp4" type="video/mp4" />
-        </video>
+    <div className="overflow-hidden">
 
-        {/* Dark overlay on video */}
-        <div className="absolute inset-0 bg-gradient-to-b from-dark-maroon/90 via-maroon/85 to-dark-maroon/92"></div>
+      {/* ═══════════ HERO SECTION ═══════════ */}
+      <section className="relative min-h-screen flex items-center gradient-hero mandala-bg">
+        {/* Subtle mandala/pattern */}
+        <div className="absolute inset-0 pointer-events-none opacity-[0.02]" style={{
+          backgroundImage: "radial-gradient(circle, #5B1616 1px, transparent 1px)",
+          backgroundSize: "40px 40px"
+        }}></div>
 
         {/* Floating spice particles */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {/* Red chilli flakes */}
-          <div className="absolute top-[10%] left-[5%] w-3 h-3 bg-red-400/40 rounded-full animate-float blur-[1px]"></div>
-          <div className="absolute top-[20%] right-[10%] w-2 h-2 bg-yellow-400/30 rounded-full animate-float" style={{ animationDelay: "1s" }}></div>
-          <div className="absolute top-[40%] left-[15%] w-4 h-4 bg-golden/20 rounded-full animate-float" style={{ animationDelay: "2s" }}></div>
-          <div className="absolute top-[60%] right-[20%] w-2 h-2 bg-orange-300/30 rounded-full animate-float" style={{ animationDelay: "0.5s" }}></div>
-          <div className="absolute top-[30%] left-[70%] w-3 h-3 bg-red-300/20 rounded-full animate-float" style={{ animationDelay: "1.5s" }}></div>
-          <div className="absolute top-[70%] left-[30%] w-2 h-2 bg-golden/30 rounded-full animate-float" style={{ animationDelay: "3s" }}></div>
-          <div className="absolute top-[15%] left-[50%] w-2 h-2 bg-amber-300/25 rounded-full animate-float" style={{ animationDelay: "2.5s" }}></div>
-          <div className="absolute top-[80%] right-[40%] w-3 h-3 bg-red-400/20 rounded-full animate-float" style={{ animationDelay: "1.8s" }}></div>
-          <div className="absolute top-[50%] left-[85%] w-2 h-2 bg-golden/25 rounded-full animate-float" style={{ animationDelay: "0.8s" }}></div>
-          <div className="absolute top-[25%] left-[40%] w-1.5 h-1.5 bg-yellow-200/20 rounded-full animate-float" style={{ animationDelay: "3.5s" }}></div>
-
-          {/* Larger floating orbs */}
-          <div className="absolute top-10 left-10 w-40 h-40 bg-golden/5 rounded-full blur-[60px] animate-float"></div>
-          <div className="absolute bottom-20 right-10 w-60 h-60 bg-golden/3 rounded-full blur-[80px] animate-float" style={{ animationDelay: "2s" }}></div>
-          <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-amber-500/3 rounded-full blur-[70px] animate-float" style={{ animationDelay: "4s" }}></div>
+          <div className="absolute top-[15%] left-[8%] w-2 h-2 bg-red-400/30 rounded-full animate-float"></div>
+          <div className="absolute top-[25%] right-[12%] w-3 h-3 bg-gold/20 rounded-full animate-float" style={{ animationDelay: "1s" }}></div>
+          <div className="absolute top-[45%] left-[20%] w-2 h-2 bg-amber-400/20 rounded-full animate-float" style={{ animationDelay: "2.5s" }}></div>
+          <div className="absolute top-[65%] right-[25%] w-2.5 h-2.5 bg-red-300/15 rounded-full animate-float" style={{ animationDelay: "1.5s" }}></div>
+          <div className="absolute top-[35%] left-[75%] w-2 h-2 bg-gold/15 rounded-full animate-float" style={{ animationDelay: "3s" }}></div>
+          <div className="absolute top-[80%] left-[40%] w-1.5 h-1.5 bg-amber-300/20 rounded-full animate-float" style={{ animationDelay: "0.5s" }}></div>
         </div>
 
-        {/* Swaminarayan-inspired mandir pattern overlay */}
-        <div className="absolute inset-0 opacity-[0.04] pointer-events-none" style={{
-          backgroundImage: `
-            repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(201,169,78,0.3) 49px, rgba(201,169,78,0.3) 50px),
-            repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(201,169,78,0.3) 49px, rgba(201,169,78,0.3) 50px)
-          `,
-          backgroundSize: "50px 50px"
-        }}></div>
+        {/* Gold line top */}
+        <div className="absolute top-0 left-0 right-0 ornament-thick"></div>
 
-        {/* Arch/dome shapes (mandir silhouette) */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] border-t-2 border-golden/5 rounded-t-full pointer-events-none"></div>
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] border-t border-golden/3 rounded-t-full pointer-events-none"></div>
+        <div className="max-w-7xl mx-auto px-6 py-24 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+          {/* LEFT — Text */}
+          <div className="animate-fade-in-up">
+            <p className="text-[11px] uppercase tracking-[0.4em] text-gold font-medium mb-6">Est. Since Generations</p>
 
-        {/* Golden line ornaments */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-golden/60 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-golden/60 to-transparent"></div>
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl text-maroon leading-[1.15] mb-6">
+              Crafted with Tradition,
+              <br />
+              <span className="text-gradient-gold">Blessed with Devotion.</span>
+            </h1>
 
-        {/* Hero Content */}
-        <div className="max-w-5xl mx-auto relative z-10 text-center py-20">
-          {/* Logo */}
-          <div className="animate-scale-in mb-8">
-            <div className="relative inline-block">
-              <Image
-                src="/logo.png"
-                alt="Harivallabh Pickles"
-                width={180}
-                height={180}
-                className="mx-auto rounded-3xl animate-glow drop-shadow-2xl"
-                style={{ filter: "drop-shadow(0 0 30px rgba(201,169,78,0.3))" }}
-                priority
-              />
-              {/* Glow ring behind logo */}
-              <div className="absolute inset-0 rounded-3xl border-2 border-golden/20 animate-pulse-gold -m-2"></div>
+            <p className="font-display text-lg md:text-xl text-foreground/60 leading-relaxed mb-8 max-w-lg italic">
+              Authentic homemade Swaminarayan pickles prepared using generations-old recipes, premium ingredients, and absolute purity.
+            </p>
+
+            {/* Buttons */}
+            <div className="flex flex-wrap gap-4 mb-10">
+              <Link href="/products" className="btn-gold-shimmer px-8 py-4 rounded-full text-sm uppercase tracking-wider">
+                Shop Collection
+              </Link>
+              <Link href="/about" className="px-8 py-4 rounded-full text-sm uppercase tracking-wider border-2 border-maroon/20 text-maroon font-medium hover:border-gold hover:text-gold transition-all">
+                Discover Our Story
+              </Link>
+            </div>
+
+            {/* Social proof */}
+            <div className="mb-6">
+              <div className="flex items-center gap-1 mb-1">
+                <span className="text-gold text-lg">★★★★★</span>
+                <span className="text-xs text-foreground/40 ml-2">Trusted by 5,000+ Happy Families</span>
+              </div>
+            </div>
+
+            {/* Trust badges */}
+            <div className="flex flex-wrap gap-3">
+              {["Homemade", "No Preservatives", "Satvik", "Fast Delivery"].map((badge) => (
+                <span key={badge} className="flex items-center gap-1.5 text-[11px] text-foreground/50 font-medium px-3 py-1.5 rounded-full border border-gold/15 bg-ivory">
+                  <span className="text-gold text-xs">✓</span> {badge}
+                </span>
+              ))}
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-5 leading-tight animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Homemade Goodness,
-            <br />
-            <span className="text-gradient-gold">Authentic Taste</span>
-          </h1>
+          {/* RIGHT — Product showcase */}
+          <div className="relative flex justify-center items-center animate-scale-in" style={{ animationDelay: "0.3s" }}>
+            {/* Rotating golden ring */}
+            <div className="absolute w-[340px] h-[340px] md:w-[420px] md:h-[420px] border border-gold/10 rounded-full animate-spin-slow"></div>
+            <div className="absolute w-[300px] h-[300px] md:w-[380px] md:h-[380px] border border-gold/5 rounded-full animate-spin-slow" style={{ animationDirection: "reverse" }}></div>
 
-          <p className="text-lg md:text-xl text-golden/80 font-medium mb-3 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            Handcrafted Traditional Indian Pickles
-          </p>
-          <p className="text-sm md:text-base text-white/40 mb-12 animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-            ♦ 12 Authentic Varieties ♦ Made with Love, Tradition & Quality Ingredients
-          </p>
+            {/* Main product image */}
+            <div className="relative z-10">
+              <Image
+                src="/logo.png"
+                alt="Harivallabh Pickles Premium Jar"
+                width={300}
+                height={300}
+                className="rounded-3xl animate-glow"
+                style={{ filter: "drop-shadow(0 20px 50px rgba(91,22,22,0.15))" }}
+                priority
+              />
+            </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-            <Link href="/products" className="bg-golden text-dark-maroon px-10 py-4 rounded-full font-bold text-lg btn-hover shadow-xl shadow-golden/30 hover:shadow-2xl hover:scale-105 transition-all">
-              <span className="relative z-10">🛒 Order Now</span>
-            </Link>
-            <Link href="/products" className="border-2 border-golden/40 text-golden px-10 py-4 rounded-full font-bold text-lg hover:bg-golden/10 hover:border-golden transition-all hover:scale-105">
-              🍯 Explore Collection
-            </Link>
-          </div>
-
-          {/* Trust Badges — inline in hero */}
-          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 animate-fade-in-up" style={{ animationDelay: "0.7s" }}>
-            {[
-              { icon: "🏠", label: "Homemade" },
-              { icon: "🌿", label: "No Preservatives" },
-              { icon: "✅", label: "FSSAI Certified" },
-              { icon: "🚚", label: "Pan India Delivery" },
-            ].map((badge) => (
-              <div key={badge.label} className="flex items-center justify-center gap-2 px-4 py-3 rounded-full border border-golden/15 bg-white/5 backdrop-blur-sm">
-                <span className="text-lg">{badge.icon}</span>
-                <span className="text-xs text-white/70 font-medium">{badge.label}</span>
-              </div>
-            ))}
+            {/* Floating ingredients around the jar */}
+            <div className="absolute top-4 -right-4 text-3xl animate-float" style={{ animationDelay: "0s" }}>🥭</div>
+            <div className="absolute -top-2 left-8 text-2xl animate-float" style={{ animationDelay: "1s" }}>🌶️</div>
+            <div className="absolute bottom-8 -left-4 text-2xl animate-float" style={{ animationDelay: "2s" }}>🌿</div>
+            <div className="absolute bottom-2 right-4 text-xl animate-float" style={{ animationDelay: "1.5s" }}>🫒</div>
+            <div className="absolute top-1/2 -right-8 text-xl animate-float" style={{ animationDelay: "2.5s" }}>🧂</div>
+            <div className="absolute top-1/3 -left-6 text-lg animate-float" style={{ animationDelay: "3s" }}>✨</div>
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
-          <div className="w-6 h-10 border-2 border-golden/30 rounded-full flex justify-center pt-2">
-            <div className="w-1 h-3 bg-golden/50 rounded-full animate-pulse"></div>
-          </div>
-        </div>
+        {/* Gold line bottom */}
+        <div className="absolute bottom-0 left-0 right-0 ornament-thick"></div>
       </section>
 
-      {/* ===== TRUST BADGES SECTION (expanded) ===== */}
-      <section className="py-14 px-4 bg-warm-white relative border-b border-golden/10">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 stagger-children reveal">
+      {/* ═══════════ LUXURY STATISTICS ═══════════ */}
+      <section className="py-16 px-6 gradient-maroon relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle, #D4AF37 1px, transparent 1px)", backgroundSize: "30px 30px" }}></div>
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center stagger-children reveal">
             {[
-              { emoji: "🏠", title: "Homemade", sub: "Crafted in small batches with care" },
-              { emoji: "🌿", title: "No Preservatives", sub: "100% natural ingredients only" },
-              { emoji: "✅", title: "FSSAI Certified", sub: "Government approved & safe" },
-              { emoji: "🚚", title: "Pan India Delivery", sub: "Free shipping above ₹500" },
-            ].map((badge) => (
-              <div key={badge.title} className="glass rounded-2xl p-6 text-center magnetic">
-                <div className="w-14 h-14 mx-auto rounded-2xl bg-cream border border-golden/20 flex items-center justify-center mb-3">
-                  <span className="text-2xl">{badge.emoji}</span>
-                </div>
-                <p className="text-sm font-semibold text-maroon">{badge.title}</p>
-                <p className="text-[11px] text-foreground/40 mt-1">{badge.sub}</p>
+              { num: "25+", label: "Years Experience" },
+              { num: "5000+", label: "Happy Families" },
+              { num: "100%", label: "Homemade" },
+              { num: "0%", label: "Artificial Preservatives" },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <p className="font-heading text-3xl md:text-4xl text-gold font-bold">{stat.num}</p>
+                <p className="text-white/50 text-xs uppercase tracking-wider mt-1">{stat.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ===== CATEGORIES ===== */}
-      <section className="py-20 px-4 bg-cream relative overflow-hidden">
+      {/* ═══════════ CATEGORY GRID ═══════════ */}
+      <section className="py-24 px-6 bg-cream relative">
         <div className="ornament-line absolute top-0 left-0 right-0"></div>
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-14 reveal">
-            <p className="text-[10px] uppercase tracking-[0.4em] text-golden font-semibold mb-3">Explore Our Range</p>
-            <h3 className="text-3xl md:text-4xl font-bold text-maroon">Pickle Categories</h3>
-            <p className="text-golden/80 font-medium mt-1">Find your perfect flavor</p>
+          <div className="text-center mb-16 reveal">
+            <p className="text-[10px] uppercase tracking-[0.5em] text-gold font-medium mb-3">Our Collection</p>
+            <h2 className="font-heading text-3xl md:text-4xl text-maroon">Shop by Category</h2>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 stagger-children reveal">
             {categories.map((cat) => (
               <Link href={`/categories/${cat.id}`} key={cat.id}>
-                <div className="bg-warm-white rounded-2xl p-7 text-center card-hover border-glow magnetic group">
-                  <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-cream to-light-cream border border-golden/20 flex items-center justify-center mb-4 group-hover:border-golden group-hover:shadow-lg transition-all duration-500">
-                    <span className="text-4xl group-hover:scale-125 transition-transform duration-500">{cat.emoji}</span>
+                <div className="bg-ivory rounded-2xl p-8 text-center card-luxury group cursor-pointer">
+                  <div className="w-20 h-20 mx-auto rounded-full bg-cream border border-gold/15 flex items-center justify-center mb-5 group-hover:border-gold group-hover:scale-110 transition-all duration-500">
+                    <span className="text-4xl">{cat.emoji}</span>
                   </div>
-                  <h4 className="text-base font-bold text-maroon">{cat.nameEn}</h4>
-                  <div className="mt-3 h-0 group-hover:h-6 overflow-hidden transition-all duration-300">
-                    <span className="text-xs text-maroon/60 font-medium">Explore →</span>
+                  <h4 className="font-heading text-sm text-maroon font-medium tracking-wide">{cat.nameEn}</h4>
+                  <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-[10px] text-gold uppercase tracking-wider">Explore →</span>
                   </div>
                 </div>
               </Link>
@@ -181,69 +156,168 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== FEATURED PRODUCTS ===== */}
-      <section className="py-20 px-4 gradient-section relative">
+      {/* ═══════════ BESTSELLERS ═══════════ */}
+      <section className="py-24 px-6 bg-ivory relative">
         <div className="ornament-line absolute top-0 left-0 right-0"></div>
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-14 reveal">
-            <p className="text-[10px] uppercase tracking-[0.4em] text-golden font-semibold mb-3">Most Loved</p>
-            <h3 className="text-3xl md:text-4xl font-bold text-maroon">Bestsellers</h3>
-            <p className="text-golden/80 font-medium mt-1">Our most popular pickles</p>
+          <div className="text-center mb-16 reveal">
+            <p className="text-[10px] uppercase tracking-[0.5em] text-gold font-medium mb-3">Most Loved</p>
+            <h2 className="font-heading text-3xl md:text-4xl text-maroon">Bestsellers</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 stagger-children reveal">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 stagger-children reveal">
             {featured.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-          <div className="text-center mt-14 reveal">
-            <Link href="/products" className="inline-flex items-center gap-2 gradient-maroon text-white px-9 py-4 rounded-full font-bold btn-hover shadow-xl shadow-maroon/15">
-              <span className="relative z-10">View All 12 Pickles →</span>
+          <div className="text-center mt-16 reveal">
+            <Link href="/products" className="btn-gold-shimmer px-10 py-4 rounded-full text-sm uppercase tracking-wider inline-block">
+              View All Pickles
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ===== WHY HARIVALLABH ===== */}
-      <section className="py-20 px-4 bg-warm-white relative overflow-hidden">
+      {/* ═══════════ INGREDIENTS STORY TIMELINE ═══════════ */}
+      <section className="py-24 px-6 bg-cream relative overflow-hidden">
         <div className="ornament-line absolute top-0 left-0 right-0"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-golden/3 rounded-full blur-[100px]"></div>
-        <div className="max-w-5xl mx-auto relative z-10">
-          <div className="text-center mb-14 reveal">
-            <p className="text-[10px] uppercase tracking-[0.4em] text-golden font-semibold mb-3">Our Promise</p>
-            <h3 className="text-3xl md:text-4xl font-bold text-maroon">Why Choose Us?</h3>
-            <p className="text-golden/80 font-medium mt-1">What makes Harivallabh special</p>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16 reveal">
+            <p className="text-[10px] uppercase tracking-[0.5em] text-gold font-medium mb-3">The Process</p>
+            <h2 className="font-heading text-3xl md:text-4xl text-maroon">From Farm to Jar</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-children reveal">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 reveal">
             {[
-              { emoji: "🕉️", title: "Devotion", sub: "Made with prayer", desc: "Every jar is prepared with mindful intention and spiritual care." },
-              { emoji: "✨", title: "Purity", sub: "All natural", desc: "Only the finest natural ingredients. Zero chemicals, zero shortcuts." },
-              { emoji: "🏺", title: "Tradition", sub: "Family recipes", desc: "Recipes perfected over generations of Gujarati culinary heritage." },
-            ].map((value) => (
-              <div key={value.title} className="glass rounded-2xl p-8 text-center card-hover magnetic">
-                <div className="w-16 h-16 mx-auto rounded-2xl gradient-maroon flex items-center justify-center mb-5 shadow-lg shadow-maroon/20">
-                  <span className="text-3xl">{value.emoji}</span>
+              { icon: "🌱", title: "Fresh Ingredients", step: "01" },
+              { icon: "🏺", title: "Traditional Preparation", step: "02" },
+              { icon: "☀️", title: "Sun Cured", step: "03" },
+              { icon: "🤲", title: "Hand Packed", step: "04" },
+              { icon: "🚚", title: "Delivered Fresh", step: "05" },
+            ].map((item, i) => (
+              <div key={item.title} className="flex flex-col items-center text-center flex-1">
+                <div className="w-16 h-16 rounded-full bg-ivory border border-gold/20 flex items-center justify-center mb-3 relative">
+                  <span className="text-2xl">{item.icon}</span>
+                  <span className="absolute -top-2 -right-2 text-[9px] bg-gold text-dark-maroon w-5 h-5 rounded-full flex items-center justify-center font-bold">{item.step}</span>
                 </div>
-                <h5 className="font-bold text-maroon text-lg">{value.title}</h5>
-                <p className="text-golden text-sm font-medium mb-2">{value.sub}</p>
-                <p className="text-sm text-foreground/50 leading-relaxed">{value.desc}</p>
+                <p className="text-xs font-medium text-maroon">{item.title}</p>
+                {i < 4 && <div className="hidden md:block w-12 h-px bg-gold/20 absolute"></div>}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ===== CTA BANNER ===== */}
-      <section className="py-20 px-4 gradient-maroon relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle, #C9A94E 1px, transparent 1px)", backgroundSize: "24px 24px" }}></div>
-        <div className="max-w-3xl mx-auto text-center relative z-10 reveal">
-          <h3 className="text-2xl md:text-4xl font-bold text-golden mb-4">Ready to taste tradition?</h3>
-          <p className="text-white/60 mb-10 text-lg">12 authentic pickles. Free delivery on orders above ₹500.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/products" className="bg-golden text-dark-maroon px-9 py-4 rounded-full font-bold hover:bg-light-golden transition-all shadow-lg hover:shadow-2xl hover:scale-105">
-              🛒 Order Now
+      {/* ═══════════ SWAMINARAYAN PROMISE ═══════════ */}
+      <section className="py-24 px-6 gradient-maroon relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle, #D4AF37 1px, transparent 1px)", backgroundSize: "24px 24px" }}></div>
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <div className="reveal">
+            <p className="text-[10px] uppercase tracking-[0.5em] text-gold/70 font-medium mb-3">Our Sacred Commitment</p>
+            <h2 className="font-heading text-3xl md:text-4xl text-gold mb-12">The Swaminarayan Promise</h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6 stagger-children reveal">
+            {[
+              { icon: "🚫🧅", label: "No Onion" },
+              { icon: "🚫🧄", label: "No Garlic" },
+              { icon: "🚫🎨", label: "No Artificial Color" },
+              { icon: "🚫🧪", label: "No Preservatives" },
+              { icon: "🙏", label: "Blessed Before Packing" },
+            ].map((item) => (
+              <div key={item.label} className="text-center">
+                <div className="w-14 h-14 mx-auto rounded-full border border-gold/20 bg-white/5 flex items-center justify-center mb-3">
+                  <span className="text-lg">{item.icon}</span>
+                </div>
+                <p className="text-[11px] text-white/70 font-medium">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════ BRAND STORY ═══════════ */}
+      <section className="py-24 px-6 bg-ivory relative">
+        <div className="ornament-line absolute top-0 left-0 right-0"></div>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="reveal">
+            <div className="bg-cream rounded-3xl p-12 text-center border border-gold/10">
+              <Image src="/logo.png" alt="Harivallabh Heritage" width={250} height={250} className="mx-auto logo-blend" />
+            </div>
+          </div>
+          <div className="reveal" style={{ transitionDelay: "0.2s" }}>
+            <p className="text-[10px] uppercase tracking-[0.5em] text-gold font-medium mb-4">Our Heritage</p>
+            <h2 className="font-heading text-3xl md:text-4xl text-maroon mb-6">A Legacy of<br />Pure Taste</h2>
+            <p className="font-display text-lg text-foreground/60 leading-relaxed italic mb-6">
+              For generations, the women of our family have preserved the art of pickle-making — a tradition rooted in devotion, purity, and the flavors of Gujarat.
+            </p>
+            <p className="text-sm text-foreground/50 leading-relaxed mb-8">
+              Every jar of Harivallabh carries the warmth of a grandmother&apos;s kitchen, the precision of time-tested recipes, and the blessings of Swaminarayan faith. We use only the freshest seasonal produce, cold-pressed mustard oil, and hand-ground spices.
+            </p>
+            <Link href="/about" className="text-gold text-sm font-medium uppercase tracking-wider hover:text-dark-gold transition-colors">
+              Read Our Full Story →
             </Link>
-            <a href="https://wa.me/919825731877" target="_blank" rel="noopener noreferrer" className="border-2 border-golden/50 text-golden px-9 py-4 rounded-full font-bold hover:bg-golden/10 transition-all hover:scale-105">
-              💬 WhatsApp Order
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════ TESTIMONIALS ═══════════ */}
+      <section className="py-24 px-6 bg-cream relative">
+        <div className="ornament-line absolute top-0 left-0 right-0"></div>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16 reveal">
+            <p className="text-[10px] uppercase tracking-[0.5em] text-gold font-medium mb-3">What People Say</p>
+            <h2 className="font-heading text-3xl md:text-4xl text-maroon">Customer Love</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-children reveal">
+            {[
+              { name: "Priya Shah", city: "Ahmedabad", text: "The best homemade pickle I have ever tasted. Reminds me of my grandmother's recipe. Absolutely pure and authentic!", rating: 5 },
+              { name: "Rajesh Patel", city: "Surat", text: "Ordered the Gol Keri and Chundo combo. Both were exceptional. The packaging was premium too. Will order again!", rating: 5 },
+              { name: "Meena Joshi", city: "Mumbai", text: "Finally found a brand that makes truly satvik pickles without onion and garlic. The Aakhi Keri is to die for!", rating: 5 },
+            ].map((review) => (
+              <div key={review.name} className="bg-ivory rounded-2xl p-8 card-luxury">
+                <div className="flex text-gold text-sm mb-4">{"★".repeat(review.rating)}</div>
+                <p className="text-sm text-foreground/60 leading-relaxed mb-6 italic">&ldquo;{review.text}&rdquo;</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full gradient-maroon flex items-center justify-center text-white text-xs font-bold">
+                    {review.name.split(" ").map(n => n[0]).join("")}
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-maroon">{review.name}</p>
+                    <p className="text-[10px] text-foreground/40">{review.city}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════ CTA / NEWSLETTER ═══════════ */}
+      <section className="py-24 px-6 bg-ivory relative">
+        <div className="ornament-line absolute top-0 left-0 right-0"></div>
+        <div className="max-w-2xl mx-auto text-center reveal">
+          <p className="text-[10px] uppercase tracking-[0.5em] text-gold font-medium mb-3">Stay Connected</p>
+          <h2 className="font-heading text-2xl md:text-3xl text-maroon mb-4">Join the Harivallabh Family</h2>
+          <p className="text-sm text-foreground/50 mb-8">Get exclusive offers, new product launches, and traditional recipes delivered to your inbox.</p>
+          <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+            <input type="email" placeholder="Enter your email" className="flex-1 px-5 py-3.5 rounded-full border border-gold/20 bg-cream text-sm focus:outline-none focus:border-gold transition-colors" />
+            <button className="btn-gold-shimmer px-7 py-3.5 rounded-full text-sm uppercase tracking-wider whitespace-nowrap">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════ FINAL CTA ═══════════ */}
+      <section className="py-20 px-6 gradient-maroon relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(circle, #D4AF37 1px, transparent 1px)", backgroundSize: "20px 20px" }}></div>
+        <div className="max-w-3xl mx-auto text-center relative z-10 reveal">
+          <h3 className="font-heading text-2xl md:text-4xl text-gold mb-4">Ready to Taste Tradition?</h3>
+          <p className="text-white/50 mb-10 text-base">12 authentic pickles. Free delivery on orders above ₹500.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/products" className="btn-gold-shimmer px-10 py-4 rounded-full text-sm uppercase tracking-wider">
+              Order Now
+            </Link>
+            <a href="https://wa.me/919825731877" target="_blank" rel="noopener noreferrer" className="border-2 border-gold/30 text-gold px-10 py-4 rounded-full text-sm uppercase tracking-wider font-medium hover:bg-gold/10 transition-all">
+              WhatsApp Order
             </a>
           </div>
         </div>
