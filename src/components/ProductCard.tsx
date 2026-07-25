@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import { Product } from "@/data/products";
 import { useCart } from "@/context/CartContext";
 import { useState } from "react";
@@ -28,7 +29,11 @@ export default function ProductCard({ product }: { product: Product }) {
 
   return (
     <Link href={`/products/${product.id}`} className="block group">
-      <div className="bg-ivory rounded-2xl overflow-hidden card-luxury h-full flex flex-col">
+      <motion.div
+        whileHover={{ y: -8, scale: 1.02 }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+        className="bg-ivory rounded-2xl overflow-hidden card-luxury h-full flex flex-col"
+      >
         {/* Image */}
         <div className="relative bg-gradient-to-br from-cream to-ivory p-8 text-center overflow-hidden">
           <div className="absolute top-0 right-0 w-24 h-24 bg-gold/3 rounded-full -translate-y-8 translate-x-8"></div>
@@ -69,7 +74,7 @@ export default function ProductCard({ product }: { product: Product }) {
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </Link>
   );
 }
